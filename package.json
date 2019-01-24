@@ -1,0 +1,49 @@
+{
+  "name": "phaser-webpack",
+  "version": "1.0.0",
+  "description": "Phaser Webpack boilerplate",
+  "scripts": {
+    "build": "webpack --config ./config/webpack.prod.conf.js",
+    "dev": "webpack --config ./config/webpack.dev.conf.js",
+    "lint": "eslint ./src/ --fix",
+    "serve": "webpack-dev-server --progress --inline --config ./config/webpack.dev.conf.js",
+    "test": "npm run lint"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run lint"
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Xisabla/Phaser-Webpack.git"
+  },
+  "keywords": [
+    "phaser",
+    "webpack"
+  ],
+  "author": "Gautier Miquet <xisabla.dev@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Xisabla/Phaser-Webpack/issues"
+  },
+  "homepage": "https://github.com/Xisabla/Phaser-Webpack#readme",
+  "devDependencies": {
+    "eslint": "^5.12.1",
+    "eslint-config-standard": "^12.0.0",
+    "eslint-loader": "^2.1.1",
+    "eslint-plugin-import": "^2.15.0",
+    "eslint-plugin-node": "^8.0.1",
+    "eslint-plugin-promise": "^4.0.1",
+    "eslint-plugin-standard": "^4.0.0",
+    "husky": "^1.3.1",
+    "webpack": "^4.29.0",
+    "webpack-cli": "^3.2.1",
+    "webpack-dev-server": "^3.1.14",
+    "webpack-merge": "^4.2.1"
+  },
+  "dependencies": {
+    "phaser": "^3.15.1",
+    "webfontloader": "^1.6.28"
+  }
+}
